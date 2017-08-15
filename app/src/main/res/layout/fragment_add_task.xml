@@ -2,6 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ecebeb"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.nishan.tasker.Fragments.AddTaskFragment">
 
     <LinearLayout
@@ -35,44 +37,65 @@
 
             />
 
-
-        <LinearLayout
-            android:layout_width="270dp"
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="14dp"
-            android:gravity="center"
-            android:background="@drawable/btn_boder"
+            app:cardElevation="8dp"
             android:layout_gravity="center"
-            android:orientation="horizontal"
-            android:padding="5dp">
+            android:layout_marginTop="30dp"
 
-            <Button
-                android:id="@+id/select_location"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:text="Select Location"
-                android:background="@android:color/transparent"
-                />
+            >
 
-            <ImageView
-                android:id="@+id/check_location"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="270dp"
                 android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp"
                 android:layout_gravity="center"
-                android:layout_marginStart="10dp"
-                android:src="@drawable/ic_location_on_black_24dp"
+                android:gravity="center"
 
-                />
+                >
 
 
-        </LinearLayout>
+                <Button
+                    android:id="@+id/select_location"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Select Location"
+                    android:background="@android:color/transparent"
+                    />
+
+                <ImageView
+                    android:id="@+id/check_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_location_on_black_24dp"
+
+                    />
+
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardElevation="8dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+
+            >
 
         <LinearLayout
             android:layout_width="270dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="14dp"
-            android:background="@drawable/btn_boder"
             android:gravity="center"
             android:orientation="horizontal"
             android:padding="5dp">
@@ -95,12 +118,22 @@
 
         </LinearLayout>
 
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardElevation="8dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+
+            >
+
         <LinearLayout
             android:layout_width="270dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="14dp"
-            android:background="@drawable/btn_boder"
             android:gravity="center"
             android:orientation="horizontal"
             android:padding="5dp">
@@ -122,13 +155,22 @@
 
 
         </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardElevation="8dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+
+            >
 
         <LinearLayout
             android:layout_width="270dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="14dp"
-            android:background="@drawable/btn_boder"
             android:gravity="center"
             android:orientation="horizontal"
             android:padding="5dp"
@@ -154,13 +196,15 @@
 
         </LinearLayout>
 
+        </android.support.v7.widget.CardView>
+
 
         <Button
             android:id="@+id/btn_add_task"
             android:layout_width="150dp"
             android:layout_height="42dp"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="40dp"
             android:background="@drawable/btn_design"
             android:padding="5dp"
             android:text="Add Task"
