@@ -18,6 +18,7 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.nishan.tasker.Activity.MapsActivity;
+import com.nishan.tasker.Notification.NotificationUtils;
 import com.nishan.tasker.R;
 
 import java.util.Calendar;
@@ -29,12 +30,12 @@ public class AddTaskFragment extends TaskerFragment implements View.OnClickListe
     private Button selectLocation , selectDate, selectTime , taskDetail;
     public ImageView checkLocation, checkDate , checkTime , checkDetails;
 
+
     private Button addTask;
 
     int sYear;
     int sMonth;
     int sDay;
-    private Date date;
     String datePicked = "";
 
 
@@ -137,6 +138,9 @@ public class AddTaskFragment extends TaskerFragment implements View.OnClickListe
 
                         //datepicked ?? this will give selected date
 
+//                        Bundle bundle = new Bundle();
+//                        bundle.putString("",);
+
 
                     }
                 }, sYear, sMonth, sDay);
@@ -231,10 +235,18 @@ public class AddTaskFragment extends TaskerFragment implements View.OnClickListe
 
         Toast.makeText(getContext(), "Add Task", Toast.LENGTH_SHORT).show();
 
+        NotificationUtils.scheduleNotification(getActivity(), " Task Title", " Task Details ", 5000);
+
+
 
 
     }
 
+//
+//    Bundle bundle = new Bundle();
+//        bundle.putString("latitude", String.valueOf(myLatitude));
+//        bundle.putString("longitude", String.valueOf(myLongitude));
+//        taskBuilder.setExtras(bundle);
 
 
 }
